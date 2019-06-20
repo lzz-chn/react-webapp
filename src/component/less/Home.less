@@ -9,7 +9,10 @@
         justify-content: space-between;
         align-items: center;
 
-        #icon-person {
+        #icon-person,
+        #icon-book {
+            fill:#65c541;
+            margin-left: .15rem;
             height: 0.2rem;
             width: 0.2rem;
         }
@@ -67,31 +70,47 @@
             flex-wrap: wrap;
 
             .NavIcon {
-                width: .45rem;
-                height: .45rem;
+                width: .46rem;
+                height: .46rem;
                 background: url(../img/sprite-87edc55a9f.png) no-repeat;
-                background-size: 2rem;
+                background-size: 2.27rem 1.79rem;
             }
-            &:nth-of-type(1){
-                i{
-                    background-position: -0.45rem 0;
+
+            &:nth-of-type(1) {
+                i {
+                    background-position: -0.54rem 0;
                 }
             }
-            &:nth-of-type(2){
-                i{
-                    background-position: -0.9rem 0;
+
+            &:nth-of-type(2) {
+                i {
+                    background-position: -1.04rem 0;
                 }
             }
-            &:nth-of-type(3){
-                i{
-                    background-position: -0.9rem -0.9rem;
+
+            &:nth-of-type(3) {
+                i {
+                    background-position: -1rem -0.97rem;
                 }
             }
-            span{
+
+            &:nth-of-type(4) {
+                i {
+                    background-position: 0 -0.97rem;
+                }
+            }
+
+            &:nth-of-type(5) {
+                i {
+                    background-position: -1.54rem 0;
+                }
+            }
+
+            span {
                 width: 100%;
                 text-align: center;
             }
-            
+
         }
     }
 }
