@@ -1,3 +1,18 @@
+.ellipsisOneLine() {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.ellipsisMoreLine(@line) {
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden; //溢出的隐藏
+    text-overflow: ellipsis; //若不支持多行显示省略号 可在单行上显示
+    display: -webkit-box; //把标签的显示类型改成弹性盒子
+    -webkit-line-clamp: @line; //设置省略号显示在第几行
+    -webkit-box-orient: vertical; //控制垂直方向上的行
+}
+
 .Home {
 
     .Header {
@@ -11,8 +26,8 @@
 
         #icon-person,
         #icon-book {
-            fill:#65c541;
-            margin-left: .15rem;
+            fill: #65c541;
+            margin-left: 0.15rem;
             height: 0.2rem;
             width: 0.2rem;
         }
@@ -24,17 +39,17 @@
     }
 
     .Search {
-        font-size: .16rem;
-        height: .44rem;
-        padding: 0 .15rem;
-        padding-top: .12rem;
+        font-size: 0.16rem;
+        height: 0.44rem;
+        padding: 0 0.15rem;
+        padding-top: 0.12rem;
         background-color: green;
         display: flex;
         font-size: 13px;
 
         a {
             background-color: #f2f3f5;
-            border-radius: .15rem;
+            border-radius: 0.15rem;
             display: flex;
             flex-grow: 1;
             justify-content: center;
@@ -43,13 +58,13 @@
 
             #icon-find {
                 fill: #808080;
-                height: .14rem;
-                width: .14rem;
+                height: 0.14rem;
+                width: 0.14rem;
             }
 
             span {
-                margin-left: .05rem;
-                line-height: .18rem;
+                margin-left: 0.05rem;
+                line-height: 0.18rem;
             }
 
         }
@@ -58,10 +73,10 @@
 
     .NavList {
         height: 1rem;
-        padding: .15rem;
+        padding: 0.15rem;
         display: flex;
         justify-content: space-between;
-        font-size: .14rem;
+        font-size: 0.14rem;
 
         a {
             flex-grow: 1;
@@ -70,8 +85,8 @@
             flex-wrap: wrap;
 
             .NavIcon {
-                width: .46rem;
-                height: .46rem;
+                width: 0.46rem;
+                height: 0.46rem;
                 background: url(../img/sprite-87edc55a9f.png) no-repeat;
                 background-size: 2.27rem 1.79rem;
             }
@@ -111,6 +126,122 @@
                 text-align: center;
             }
 
+        }
+    }
+
+    .Ad {
+        height: 0.75rem;
+        margin: 0.12rem 0;
+        background-color: #808080;
+
+        a {
+            display: block;
+            height: inherit;
+
+            img {}
+        }
+    }
+
+    div { 
+        padding: 0 0.16rem 0.16rem;
+        .Title {
+            display: flex;
+            align-items: center;
+            font-size: 0;
+
+            #icon-mhot {
+                fill: #ff6177;
+                height: 0.2rem;
+                width: 0.2rem;
+            }
+
+
+            span {
+                margin: 0 0.1rem;
+                color: #1A1A1A;
+                font-weight: 500;
+                font-size: 0.16rem;
+                line-height: 0.28rem;
+            }
+        }
+    }
+
+    .Hot {
+        // padding: 0 0.16rem 0.16rem;
+
+        .Content {
+            margin: 0.1rem 0;
+
+            li {
+                margin: 0.15rem 0;
+                a {
+                    float: left;
+                    height: 0.88rem;
+                    width: 0.66rem;
+                    margin-right: 0.08rem;
+                    background-color: pink;
+
+                    img {}
+                }
+
+                h3 {
+                    font-size: 0.14rem;
+                    font-weight: 700;
+                    .ellipsisOneLine();
+                }
+
+                p {
+                    .ellipsisMoreLine(2);
+                    font-size: 0.12rem;
+                    line-height: 0.19rem;
+                    height: 0.39rem;
+                    margin: 0.08rem 0 0.1rem;
+                }
+
+                .BookMate {
+                    font-size: 0.12rem;
+                }
+
+                &::after {
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+            }
+
+        }
+    }
+
+    .Free {
+        // padding: 0 0.16rem 0.16rem;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+
+            li {
+                padding: 0.12rem 0.08rem 0.08rem;
+
+                a {
+                    display: block;
+                    width: 0.66rem;
+                    height: 0.88rem;
+                    background-color: pink;
+
+                    img {}
+                }
+
+                h4 {
+                    width: 0.66rem;
+                    font-size: 0.13rem;
+                }
+
+                p {
+                    font-size: 0.12rem;
+                    line-height: 0.19rem;
+                    height: 0.39rem;
+                }
+            }
         }
     }
 }
