@@ -26,6 +26,7 @@
         .User {
             display: flex;
             align-items: center;
+
             #icon-person,
             #icon-book {
                 fill: #65c541;
@@ -37,8 +38,16 @@
     }
 
     .Banner {
-        height: 2rem;
-        background-color: aqua;
+        padding: 0;
+        font-size: 0;
+        // height: 2rem;
+        background-color: #fff;
+
+        .swiper-example {
+            img {
+                width: 100%;
+            }
+        }
     }
 
     .Search {
@@ -46,7 +55,7 @@
         height: 0.44rem;
         padding: 0 0.15rem;
         padding-top: 0.12rem;
-        background-color: green;
+        // background-color: green;
         display: flex;
         font-size: 13px;
 
@@ -133,15 +142,15 @@
     }
 
     .Ad {
-        height: 0.75rem;
+        padding: 0;
+        font-size: 0;
         margin: 0.12rem 0;
-        background-color: #808080;
 
         a {
-            display: block;
-            height: inherit;
-
-            img {}
+            img {
+                height: 0.75rem;
+                width: 100%;
+            }
         }
     }
 
@@ -228,12 +237,13 @@
                 padding: 0.12rem 0.08rem 0.08rem;
 
                 a {
-                    display: block;
-                    width: 0.66rem;
-                    height: 0.88rem;
-                    background-color: pink;
+                    // background-color: pink;
 
-                    img {}
+                    img {
+                        display: block;
+                        width: 0.66rem;
+                        height: 0.88rem;
+                    }
                 }
 
                 h4 {

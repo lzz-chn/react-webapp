@@ -18,15 +18,18 @@
   width: 0.2rem;
 }
 .Home .Banner {
-  height: 2rem;
-  background-color: aqua;
+  padding: 0;
+  font-size: 0;
+  background-color: #fff;
+}
+.Home .Banner .swiper-example img {
+  width: 100%;
 }
 .Home .Search {
   font-size: 0.16rem;
   height: 0.44rem;
   padding: 0 0.15rem;
   padding-top: 0.12rem;
-  background-color: green;
   display: flex;
   font-size: 13px;
 }
@@ -87,13 +90,13 @@
   text-align: center;
 }
 .Home .Ad {
-  height: 0.75rem;
+  padding: 0;
+  font-size: 0;
   margin: 0.12rem 0;
-  background-color: #808080;
 }
-.Home .Ad a {
-  display: block;
-  height: inherit;
+.Home .Ad a img {
+  height: 0.75rem;
+  width: 100%;
 }
 .Home > div {
   padding: 0 0.16rem 0.16rem;
@@ -162,11 +165,10 @@
 .Home .Free ul li {
   padding: 0.12rem 0.08rem 0.08rem;
 }
-.Home .Free ul li a {
+.Home .Free ul li a img {
   display: block;
   width: 0.66rem;
   height: 0.88rem;
-  background-color: pink;
 }
 .Home .Free ul li h4 {
   width: 0.66rem;
