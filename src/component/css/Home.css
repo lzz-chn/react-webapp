@@ -30,6 +30,10 @@
   height: 0.44rem;
   padding: 0 0.15rem;
   padding-top: 0.12rem;
+<<<<<<< HEAD
+=======
+  background-color: green;
+>>>>>>> 7fb131b8acf525f838ff16a0595130fc36f2bcf2
   display: flex;
   font-size: 13px;
 }
@@ -90,6 +94,7 @@
   text-align: center;
 }
 .Home .Ad {
+<<<<<<< HEAD
   padding: 0;
   font-size: 0;
   margin: 0.12rem 0;
@@ -102,16 +107,38 @@
   padding: 0 0.16rem 0.16rem;
 }
 .Home > div .Title {
+=======
+  height: 0.75rem;
+  margin: 0.12rem 0;
+  background-color: #808080;
+}
+.Home .Ad a {
+  display: block;
+  height: inherit;
+}
+.Home div {
+  padding: 0 0.16rem 0.16rem;
+}
+.Home div .Title {
+>>>>>>> 7fb131b8acf525f838ff16a0595130fc36f2bcf2
   display: flex;
   align-items: center;
   font-size: 0;
 }
+<<<<<<< HEAD
 .Home > div .Title #icon-mhot {
+=======
+.Home div .Title #icon-mhot {
+>>>>>>> 7fb131b8acf525f838ff16a0595130fc36f2bcf2
   fill: #ff6177;
   height: 0.2rem;
   width: 0.2rem;
 }
+<<<<<<< HEAD
 .Home > div .Title span {
+=======
+.Home div .Title span {
+>>>>>>> 7fb131b8acf525f838ff16a0595130fc36f2bcf2
   margin: 0 0.1rem;
   color: #1A1A1A;
   font-weight: 500;
@@ -165,10 +192,18 @@
 .Home .Free ul li {
   padding: 0.12rem 0.08rem 0.08rem;
 }
+<<<<<<< HEAD
 .Home .Free ul li a img {
   display: block;
   width: 0.66rem;
   height: 0.88rem;
+=======
+.Home .Free ul li a {
+  display: block;
+  width: 0.66rem;
+  height: 0.88rem;
+  background-color: pink;
+>>>>>>> 7fb131b8acf525f838ff16a0595130fc36f2bcf2
 }
 .Home .Free ul li h4 {
   width: 0.66rem;
