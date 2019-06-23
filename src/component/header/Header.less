@@ -1,0 +1,98 @@
+// out: ./
+.header {
+    font-size: 0;
+    background: #24292e;
+    height: 0.5rem;
+    border-bottom: 1px solid #5b5f63;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.1rem;
+    position: relative;
+
+    svg {
+        cursor: pointer;
+        fill: #fff;
+    }
+
+    .nav {
+
+        @keyframes slideUp {
+            from {
+                max-height: 500px;
+            }
+
+            to {
+                max-height: 0;
+            }
+        }
+
+        @keyframes slideDown {
+            to {
+                max-height: 500px;
+            }
+        }
+
+        @keyframes show {
+            from {
+                transform: rotate(360deg) scale(0);
+            }
+
+            to {
+                transform: rotate(0deg) scale(1);
+            }
+        }
+
+        @keyframes hidden {
+            from {
+                transform: rotate(0deg) scale(1);
+            }
+
+            to {
+                transform: rotate(360deg) scale(0);
+            }
+        }
+
+        .octicon-three-bars{
+            position: relative;
+            right: -18px;
+            transform: scale(0);
+            animation: show 0.3s linear forwards;
+        }
+
+        .octicon-x {
+            transform: scale(0);
+        }
+
+        .navList {
+            position: absolute;
+            top: 0.5rem;
+            right: 0;
+            background-color: #fff;
+            width: 100%;
+            max-height: 0;
+            overflow: hidden;
+
+            li {
+                cursor: pointer;
+                padding: 0.05rem 0;
+                text-align: center;
+                font-size: 0.16rem;
+                white-space: nowrap;
+
+                a{
+                    display: block;
+                }  
+                // &:hover {
+                //     background-color: #2b3137;
+                //     color: #fff;
+                // }
+                .active {
+                    background-color: #2b3137;
+                    color: #fff;
+                }
+            }
+
+        }
+    }
+}

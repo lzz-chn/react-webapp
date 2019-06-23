@@ -1,0 +1,41 @@
+.nav3 {
+  font-size: 0;
+  padding: 10px;
+}
+.nav3 .title {
+  font-size: 0.3rem;
+}
+.nav3 .filter {
+  margin: 0.1rem;
+}
+.nav3 .filter p {
+  margin: 10px 0;
+}
+.nav3 .filter a {
+  margin: 0 10px;
+  text-decoration: underline;
+}
+.nav3 .list {
+  padding: 10px;
+  font-size: 16px;
+}
+.nav3 .list h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #5b5f63;
+}
+.nav3 .list h2 a {
+  font-size: 12px;
+}
+.nav3 .list ul {
+  margin: 10px 0;
+}
+.nav3 .list ul li {
+  color: #000;
+  width: 90%;
+  height: 80px;
+  background-color: #f66a0a;
+  margin: 10px auto;
+  border-radius: 5px;
+}
