@@ -1,0 +1,28 @@
+.footer {
+  font-size: 0;
+  color: #24292e;
+}
+.footer > h2 {
+  margin: 0.1rem;
+  padding: 0.05rem 0;
+  font-size: 0.2rem;
+  font-weight: 700;
+  border-bottom: 1px solid #959da5;
+}
+.footer ul {
+  color: #586069;
+  font-size: 0.16rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0.2rem;
+}
+.footer ul li {
+  margin: 0.1rem;
+}
+.footer div {
+  margin: 0.1rem;
+  font-size: 0.14rem;
+  display: flex;
+  color: #959da5;
+  justify-content: space-evenly;
+}

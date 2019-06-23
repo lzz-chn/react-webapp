@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import './css/Home.css';
 import config from './config';
 import ReactSwiper from './Banner';
+import { promised } from 'q';
 
 class Home extends Component {
     constructor(props) {
@@ -13,8 +14,8 @@ class Home extends Component {
         this.getApi();
     }
     getApi() {
-        // 这里写请求网站的基本数据
-        // 1.请求网站的基本数据
+        // 这里写请求的数据
+        // 可以使用：ajax(原生ajax,jQuery ajax)、fetch
         const getWebsite = fetch(`${config.serverApi}/getWebsite`)
             .then(response => response.json())
             .then(myJson => myJson)
@@ -42,7 +43,7 @@ class Home extends Component {
                 // console.log(this.state);
             },
             error => {
-                this.setState({ status: error });
+                this.setState({ status: 'error' });
             }
         );
     }
@@ -188,34 +189,43 @@ class Home extends Component {
                                 <span>免费读书</span>
                             </div>
                             <ul>
-                                <li>
-                                    <Link to={null}>
-                                        <img src={free[0].img_path} alt="" />
-                                    </Link>
-                                    <h4>顾少的偏执宠爱</h4>
-                                    <p>小羊园长</p>
-                                </li>
-                                <li>
-                                    <Link to={null}>
-                                        <img src={free[1].img_path} alt="" />
-                                    </Link>
-                                    <h4>顾少的偏执宠爱</h4>
-                                    <p>小羊园长</p>
-                                </li>
-                                <li>
-                                    <Link to={null}>
-                                        <img src={free[2].img_path} alt="" />
-                                    </Link>
-                                    <h4>顾少的偏执宠爱</h4>
-                                    <p>小羊园长</p>
-                                </li>
-                                <li>
-                                    <Link to={null}>
-                                        <img src={free[3].img_path} alt="" />
-                                    </Link>
-                                    <h4>顾少的偏执宠爱</h4>
-                                    <p>小羊园长</p>
-                                </li>
+                                {free.map((v, i) => (
+                                    <li key={i}>
+                                        <Link to={null}>
+                                            <img src={v.img_path} alt="" />
+                                        </Link>
+                                        <h4>{v.title}</h4>
+                                        <p>{v.author}</p>
+                                    </li>
+                                ))}
+                                {/* // <li>
+                                //     <Link to={null}>
+                                //         <img src={free[0].img_path} alt="" />
+                                //     </Link>
+                                //     <h4>{free[0].title}</h4>
+                                //     <p>{free[0].author}</p>
+                                // </li>
+                                // <li>
+                                //     <Link to={null}>
+                                //         <img src={free[1].img_path} alt="" />
+                                //     </Link>
+                                //     <h4>顾少的偏执宠爱</h4>
+                                //     <p>小羊园长</p>
+                                // </li>
+                                // <li>
+                                //     <Link to={null}>
+                                //         <img src={free[2].img_path} alt="" />
+                                //     </Link>
+                                //     <h4>顾少的偏执宠爱</h4>
+                                //     <p>小羊园长</p>
+                                // </li>
+                                // <li>
+                                //     <Link to={null}>
+                                //         <img src={free[3].img_path} alt="" />
+                                //     </Link>
+                                //     <h4>顾少的偏执宠爱</h4>
+                                //     <p>小羊园长</p>
+                                // </li> */}
                             </ul>
                         </div>
                     </div>
