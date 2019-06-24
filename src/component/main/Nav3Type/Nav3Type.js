@@ -9,7 +9,7 @@ class Nav3Type extends Component {
     }
     render() {
         return (
-            <div className="nav2">
+            <div className="nav3type">
                 <div className="title">导航3类型</div>
                 <div className="list">
                     <h2>

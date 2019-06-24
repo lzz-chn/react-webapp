@@ -17,27 +17,16 @@ class Nav2 extends Component {
 
         Promise.all([getImg]).then(
             result => {
-                console.log(result);
-                // this.setState({ img: result });
+                this.setState({ img: result[0].data.list });
+                console.log(this.state.img);
             },
             error => {
                 console.log(error);
             }
         );
-
-        // let ajax=new XMLHttpRequest();
-        // let url="https://www.doutula.com/api/search?keyword=金馆长&mime=0&page=2";
-        // ajax.open("get",url,true);
-        // ajax.send();
-        // ajax.onreadystatechange=()=>{
-        //     if(ajax.readyState==4&&ajax.status==200){
-        //         var data=JSON.parse(ajax.responseText).data.list;
-        //         console.log(data);
-        //         this.setState({imgList:data});
-        //     }
-        // }
     }
     render() {
+        const img = this.state.img;
         return (
             <div className="nav2">
                 <div className="title">导航2</div>
@@ -47,24 +36,14 @@ class Nav2 extends Component {
                         <Link to="xxx">more</Link>
                     </h2>
                     <ul>
-                        <li>
-                            <Link to="xxx/1">Content1</Link>
-                        </li>
-                        <li>
-                            <Link to="xxx/2">Content2</Link>
-                        </li>
-                        <li>
-                            <Link to="xxx/3">Content3</Link>
-                        </li>
-                        <li>
-                            <Link to="xxx/4">Content4</Link>
-                        </li>
-                        <li>
-                            <Link to="xxx/5">Content5</Link>
-                        </li>
-                        <li>
-                            <Link to="xxx/6">Content6</Link>
-                        </li>
+                        {img.map((v, i) => (
+                            <li>
+                                <p>{v.out_id}</p>
+                                <Link to="xxx/1">
+                                    <img src={v.image_url} alt="" />
+                                </Link>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </div>
