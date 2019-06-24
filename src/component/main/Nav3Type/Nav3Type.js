@@ -10,29 +10,42 @@ class Nav3Type extends Component {
     render() {
         return (
             <div className="nav2">
-                <div className="title">导航3类型1</div>
+                <div className="title">导航3类型</div>
                 <div className="list">
                     <h2>
-                        <span>title</span><Link to="xxx">more</Link>
+                        <span>title</span>
+                        <Link to="xxx">more</Link>
                     </h2>
                     <ul>
                         <li>
-                            <Link to="/nav3/1" >Content{this.props.id}</Link>
+                            <Link to="/xxx/1">
+                                Content{this.props.match.params.id}
+                            </Link>
                         </li>
                         <li>
-                            <Link to="xxx/2" >Content2</Link>
+                            <Link to="/xxx/2">
+                                Content{this.props.match.params.id}
+                            </Link>
                         </li>
                         <li>
-                            <Link to="xxx/3" >Content3</Link>
+                            <Link to="/xxx/3">
+                                Content{this.props.match.params.id}
+                            </Link>
                         </li>
                         <li>
-                            <Link to="xxx/4" >Content4</Link>
+                            <Link to="/xxx/4">
+                                Content{this.props.match.params.id}
+                            </Link>
                         </li>
                         <li>
-                            <Link to="xxx/5" >Content5</Link>
+                            <Link to="/xxx/5">
+                                Content{this.props.match.params.id}
+                            </Link>
                         </li>
                         <li>
-                            <Link to="xxx/6" >Content6</Link>
+                            <Link to="/xxx/6">
+                                Content{this.props.match.params.id}
+                            </Link>
                         </li>
                     </ul>
                 </div>

@@ -6,22 +6,36 @@ class Nav2 extends Component {
     constructor(props) {
         super(props);
         this.state = { img: [] };
-        // this.getApi();
+        this.getApi();
     }
     getApi() {
-        const getImg = fetch('https://')
+        const getImg = fetch(
+            'https://www.doutula.com/api/search?keyword=金馆长&mime=0&page=2'
+        )
             .then(response => response.json())
             .then(result => result);
 
         Promise.all([getImg]).then(
             result => {
                 console.log(result);
-                this.setState({ img: result });
+                // this.setState({ img: result });
             },
             error => {
                 console.log(error);
             }
         );
+
+        // let ajax=new XMLHttpRequest();
+        // let url="https://www.doutula.com/api/search?keyword=金馆长&mime=0&page=2";
+        // ajax.open("get",url,true);
+        // ajax.send();
+        // ajax.onreadystatechange=()=>{
+        //     if(ajax.readyState==4&&ajax.status==200){
+        //         var data=JSON.parse(ajax.responseText).data.list;
+        //         console.log(data);
+        //         this.setState({imgList:data});
+        //     }
+        // }
     }
     render() {
         return (
